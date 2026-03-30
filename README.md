@@ -185,9 +185,9 @@ Users are responsible for obtaining access through the official sources and comp
 ### Models
 We evaluate a diverse set of **open-weight decoder-only LLMs**, covering different architectures and parameter scales:
 
-- **Gemma** — 2B, 9B
-- **LLaMA** — 1B, 3B, 8B
-- **Qwen** — 1.5B, 3B, 7B
+- **Gemma 2** — 2B, 9B
+- **LLaMA 3.x** — 3.1 8B, 3.2 1B, 3.2 3B
+- **Qwen 2.5** — 1.5B, 3B, 7B
 - **Mistral** — 7B
 - **Phi-3.5 Mini**
 
