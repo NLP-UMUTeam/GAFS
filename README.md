@@ -185,11 +185,11 @@ Users are responsible for obtaining access through the official sources and comp
 ### Models
 We evaluate a diverse set of **open-weight decoder-only LLMs**, covering different architectures and parameter scales:
 
-- **Gemma** — 2B, 9B.
-- **LLaMA** — 1B, 3B, 8B.  
-- **Qwen** — 1.5B, 3B, 7B. 
-- **Mistral** — 7B.
-- **Phi-3.5 Mini**.
+- **Gemma** — 2B, 9B
+- **LLaMA** — 1B, 3B, 8B
+- **Qwen** — 1.5B, 3B, 7B
+- **Mistral** — 7B
+- **Phi-3.5 Mini**
 
 This selection allows us to analyze:
 - The effect of **model size**.
@@ -292,7 +292,7 @@ This repository provides all the necessary components to fully reproduce the exp
 All experiments are designed to be reproducible under a controlled setup, with fixed seeds and deterministic decoding.
 
 ### Repository Structure
-
+```
 ├── prompts/
 │ └── Prompt templates used in the experiments
 │
@@ -312,6 +312,7 @@ All experiments are designed to be reproducible under a controlled setup, with f
 │ └── Images included in this repository
 │
 └── README.md
+```
 
 ### Code Description
 
