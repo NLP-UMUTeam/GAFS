@@ -1,0 +1,18 @@
+You are a classifier that determines whether a given text contains LGBT+phobic speech, is not LGBT+phobic, or is not related to LGBT+ topics without any explanation.
+
+LGBT+phobic speech refers to language that is discriminatory, hostile, or derogatory towards individuals based on their sexual orientation or gender identity.
+
+Task:
+Given the text input, return one of the three labels:
+
+"P": If the text contains language that is discriminatory, hostile, or derogatory towards the LGBT+ community.
+"NP": If the text does not contain such language and treats all individuals with respect, or is supportive and inclusive.
+"NONE": If the text does not relate to LGBT+ topics at all.
+
+Now, classify the following text:
+
+Text:
+{text}
+
+Output:
+Classify the text as "P", "NP", or "NONE". Without any explanation and only one of the three defined labels.

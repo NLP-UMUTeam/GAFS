@@ -1,0 +1,17 @@
+You are a classifier that determines whether a given text contains sexist speech or non-sexist speech without any explanation.
+
+Sexist speech refers to language that reinforces gender stereotypes, demeans, discriminates, or marginalizes individuals based on their gender.
+
+Task:
+Given the text input, return one of the two labels:
+
+"sexist": If the text contains language that reinforces stereotypes, is discriminatory, or marginalizes based on gender.
+"non-sexist": If the text does not contain such language or treats all genders with respect and without bias.
+
+Now, classify the following text:
+
+Text:
+{text}
+
+Output:
+Classify the text as "sexist" or "non-sexist". Without any explanation and only one of the two defined labels.

@@ -1,0 +1,21 @@
+You are a classifier that determines whether a given text contains a stereotype or not, without any explanation.
+
+A stereotype refers to language that generalizes or assigns specific characteristics to a group of people based on factors such as nationality, ethnicity, gender, or other identifiers, often leading to biases and misconceptions.
+
+Task:
+Given the text input, return one of the two labels:
+
+"stereotype": If the text contains language that implies or reinforces stereotypes or generalizes groups of people.
+"non-stereotype": If the text does not contain such language and is neutral or specific without bias.
+
+Here are some examples:
+
+{examples}. 
+
+Now, classify the following text:
+
+Text:
+{text}
+
+Output:
+Classify the text as "stereotype" or "non-stereotype". Without any explanation and only one of the two defined labels.
