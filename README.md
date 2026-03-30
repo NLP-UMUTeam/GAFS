@@ -379,6 +379,20 @@ The following scripts provide a simple way to reproduce the experiments:
 
 These scripts contain the commands and configurations required to run the experiments end-to-end.
 
+### Environment
+
+The experiments were conducted using the following environment:
+
+- Python — 3.10
+- torch — 2.9.1
+- transformers — 4.57.3
+- scikit-learn — 1.7.2
+- tqdm — 4.67.1
+- pandas — 2.3.3
+- numpy — 2.2.6
+
+These libraries are required to run the scripts included in this repository.
+
 ## License
 
 This repository is released under the MIT License.
