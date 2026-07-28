@@ -23,20 +23,24 @@ The method is evaluated on multiple Spanish hate speech detection datasets and c
 
 ### Authors
 
-- **Tomás Bernal-Beltrán** — University of Murcia  
+- **Tomás Bernal-Beltrán** \* — University of Murcia  
   [Google Scholar](https://scholar.google.com/citations?user=0bTUxQEAAAAJ) · [ORCID](https://orcid.org/0009-0006-6971-1435)
 
-- **Ronghao Pan** — University of Murcia  
+- **Ronghao Pan** \* — University of Murcia  
   [Google Scholar](https://scholar.google.com/citations?user=80lntLMAAAAJ) · [ORCID](https://orcid.org/0009-0008-7317-7145)
 
-- **José Antonio García-Díaz** — University of Murcia  
+- **José Antonio García-Díaz** \* — University of Murcia  
   [Google Scholar](https://scholar.google.com/citations?user=ek7NIYUAAAAJ) · [ORCID](https://orcid.org/0000-0002-3651-2660)
 
-- **Rafael Valencia-García** — University of Murcia  
+- **Ghassan Beudoun** \*\* — University of Technology Sydney  
+  [Google Scholar](https://scholar.google.com/citations?user=NBwtqUMAAAAJ) · [ORCID](https://orcid.org/0000-0001-8087-5445)
+
+- **Rafael Valencia-García** \* — University of Murcia  
   [Google Scholar](https://scholar.google.com/citations?user=GLpBPNMAAAAJ) · [ORCID](https://orcid.org/0000-0003-2457-1791)  
 
 > **Affiliations:**  
-> \* *Departamento de Informática y Sistemas, Universidad de Murcia, Campus de Espinardo, 30100, Murcia, Spain*
+> \* *Departamento de Informática y Sistemas, Universidad de Murcia, Campus de Espinardo, 30100, Murcia, Spain*     
+> \*\* *University of Technology Sydney, 81 Broadway, Ultimo, NSW, Australia*
 
 ### Publication
 **Publication information will be added upon paper acceptance.**
@@ -48,10 +52,7 @@ This work is part of the research project LaTe4PoliticES (PID2022-138099OB-I00) 
 **Citation information will be added upon paper acceptance.**
 
 ### Abstract
-Few-shot learning (FSL) in large language models relies heavily on the selection of in-context examples, yet most existing approaches use simple heuristics such as random sampling or similarity-based retrieval. In this work, we propose GAFS, a genetic algorithm-based method that formulates example selection as a global combinatorial optimization problem. Unlike standard strategies, GAFS searches for subsets of examples that jointly maximize downstream task performance, explicitly capturing interactions between examples.
-We evaluate the proposed approach on four Spanish hate speech detection datasets (HatEval, EXIST, DETESTS and HOMO-MEX) using a diverse set of LLM architectures and parameter scales. The results show that GAFS consistently outperforms random and retrieval-based FSL in the majority of models, achieving substantial improvements in macro-averaged F1-score across datasets. Statistical significance analysis using McNemar's test further confirms that these gains are robust, with GAFS correctly classifying nearly two thousand more instances than the strongest baseline ($\Delta = 1970$, $p < 0.001$).
-In addition, an analysis of the selected examples reveals that maximizing diversity or coverage alone is not sufficient for optimal performance. Instead, selecting examples that are well aligned with both the model and the task plays a more critical role. These findings highlight the importance of considering interactions between examples, rather than relying on local selection criteria.
-Overall, this work demonstrates that treating example selection as a global optimization problem is a highly effective strategy for improving FSL in in-context learning, enabling more principled, adaptive and performance-driven prompting methods.
+Few-Shot Learning (FSL) in Large Language Models (LLMs) is highly sensitive to the selection of suitable in-context examples, yet most existing approaches rely on random sampling or retrieval-based heuristics that evaluate examples according to local criteria. In this work, we propose GAFS, a genetic algorithm-based method that formulates FSL example selection as a global combinatorial optimization problem. GAFS searches for fixed-size subsets of demonstrations that jointly maximize downstream task performance, allowing interactions between examples to be explicitly considered. We evaluate GAFS on four Spanish hate speech detection datasets, namely HatEval, EXIST, DETESTS and HOMO-MEX, using ten open-weight LLMs from different families and parameter scales, and compare it against random and retrieval-based FSL baselines. The best GAFS configurations achieve macro-averaged F1-scores of 67.5 on HatEval, 73.1 on EXIST, 67.6 on DETESTS and 63.7 on HOMO-MEX. Across datasets, GAFS leads to the best performance in the majority of evaluated models and consistently outperforms random and retrieval-based baselines. Statistical significance analysis using McNemar’s test further confirms the robustness of these gains, with GAFS correctly classifying 1,970 more instances than the strongest baseline in the aggregated evaluation ($\Delta = 1970$, $p < 0.001$). The analysis of selected examples shows that maximizing diversity or coverage alone is not sufficient for optimal performance. Instead, examples better aligned with both the target model and the task lead to stronger results. These findings demonstrate that treating example selection as a global optimization problem is an effective strategy for improving FSL, enabling more adaptive, model-aware and performance-driven prompting methods.
 
 ## GAFS Method
 
@@ -70,7 +71,7 @@ Where:
 
 The overall optimization process of GAFS is illustrated below:
 
-![GAFS Optimization Loop](./images/gafs_pipeline.png)
+![GAFS Optimization Loop](./images/gafs_pipeline.jpg)
 
 The figure shows how GAFS iteratively evolves candidate subsets of examples using a genetic algorithm guided by LLM-based evaluation, ultimately producing an optimized few-shot prompt.
 
